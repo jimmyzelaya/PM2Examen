@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2Examen.MainPage">
+
+    
+
+    <StackLayout>
+        
+         <Frame BackgroundColor="Goldenrod" Padding="24" CornerRadius="0">
+            <Label Text="EXAMEN MOVIL 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
+        <Image x:Name="img"  HeightRequest="200" WidthRequest="200" BackgroundColor="Azure" 
+               Margin="20,0,20,0" HorizontalOptions="Center" Source="foto.jpg">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AddImg" NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+            
+        </Image>
+
+        <Label Text="Latitud" FontSize="Subtitle" Padding="30,10,30,0"/>
+        <Entry x:Name="txtlatitud"  Margin="30,0,30,0" FontSize="Subtitle" IsReadOnly="True"/>
+        <Label Text="Longitud" FontSize="Subtitle" Padding="30,0,30,0"/>
+        <Entry x:Name="txtlongitud"  Margin="30,0,30,0" FontSize="Subtitle" IsReadOnly="True"/>
+
+        <Label Text="Descripcion" FontSize="Subtitle" Padding="30,0,30,0"/>
+        <Editor x:Name="txtdescripcion" Placeholder="ingrese una descripcion " BackgroundColor="White"
+                Margin="30,0,30,0" FontSize="Subtitle"  HeightRequest="70" TextColor="Chocolate"/>
+
+        <RelativeLayout HorizontalOptions="CenterAndExpand" Margin="20">
+            <Grid>
+                <Button Text="Agregar" x:Name="btnAgregar"  WidthRequest="150" Grid.Column="0" Clicked="btnagregars_Clicked" BackgroundColor="Goldenrod"/>
+                <Button Text="Listar Sitios" x:Name="btnlistar" WidthRequest="150"  Grid.Column="1" Clicked="btnlistar_Clicked" BackgroundColor="Goldenrod"/>
+                <Button Text="Salir" x:Name="btnSalir" WidthRequest="150" HorizontalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2" Clicked="btnsalir_Clicked" BackgroundColor="Goldenrod"/> 
+            </Grid>
+            
+        </RelativeLayout>
+
+        
+
+
+
+
+        
+    </StackLayout>
+
+</ContentPage>
